@@ -63,13 +63,13 @@ const App = () => {
       name: formValues.name.trim(),
       size: formValues.size.trim(),
       sauce: formValues.sauce.trim(),
-      toppings: ['pepperoni', 'bacon', 'chicken', 'mushrooms', 'onions', 'peppers'].filter(topping => !!formValues[topping])
+      toppings: ['pepperoni', 'bacon', 'chicken', 'mushrooms', 'onions', 'peppers'].filter(topping => !!formValues[topping]),
+      special: formValues.special.trim()
     }
     postNewOrder(newOrder);
   }
 
   return (
-    <Router>
       <div className="App">
         <h1>BloomTech Eats</h1>
         <nav>
@@ -92,7 +92,6 @@ const App = () => {
           <Route exact path='/' component={Home} />
         </Switch>
       </div>
-    </Router>
   );
 };
 
