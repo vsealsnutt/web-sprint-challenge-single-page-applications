@@ -46,7 +46,7 @@ function PizzaForm(props) {
                     <h4>Choice of Size</h4>
                     <h5>Required</h5>
                     <label>Size 
-                        <select value={values.size} name='size' onChange={onChange}>
+                        <select id='size-dropdown' value={values.size} name='size' onChange={onChange}>
                             <option value= ''>Select</option>
                             <option value='small'>Small</option>
                             <option value='medium'>Medium</option>
@@ -143,7 +143,7 @@ function PizzaForm(props) {
                 <div className='special-container'>
                     <h4>Special Instructions</h4>
                     <label>
-                        <input
+                        <input id='special-text'
                             type='text'
                             name='special'
                             value={values.special}
