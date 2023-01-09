@@ -5,7 +5,7 @@ const Home = () => {
     const history = useHistory();
 
     const routeToForm = () => {
-        history.push('/pizza-form');
+        history.push('/pizza');
     }
 
     return (

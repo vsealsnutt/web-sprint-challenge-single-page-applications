@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 import Home from './Components/Home';
@@ -80,10 +80,7 @@ const App = () => {
         </nav>
 
         <Switch>
-          <Route path={'/confirmation'}>
-            <Confirmation />
-          </Route>
-          <Route path={'/pizza-form'}>
+          <Route path={'/pizza'}>
             <PizzaForm 
               values={formValues}
               change={inputChange}
@@ -91,12 +88,12 @@ const App = () => {
               errors={formErrors}
             />
           </Route>
-          <Route path='/'>
-            <Home />
-          </Route>
+          <Route path={'/confirmation'} component={Confirmation} />
+          <Route exact path='/' component={Home} />
         </Switch>
       </div>
     </Router>
   );
 };
+
 export default App;
