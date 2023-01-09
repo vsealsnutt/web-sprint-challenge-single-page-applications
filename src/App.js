@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { Route, Link, Switch } from 'react-router-dom';
 
 import Home from './Components/Home';
 import PizzaForm from './Components/PizzaForm';
@@ -70,28 +70,28 @@ const App = () => {
   }
 
   return (
-      <div className="App">
-        <h1>BloomTech Eats</h1>
-        <nav>
-          <div className="nav-links">
-            <Link to='/'>Home</Link>
-            <Link to='/help'>Help</Link>
-          </div>
-        </nav>
+    <div className="App">
+      <h1>BloomTech Eats</h1>
+      <nav>
+        <div className="nav-links">
+          <Link to='/'>Home</Link>
+          <Link to='/help'>Help</Link>
+        </div>
+      </nav>
 
-        <Switch>
-          <Route path={'/pizza'}>
-            <PizzaForm 
-              values={formValues}
-              change={inputChange}
-              submit={formSubmit}
-              errors={formErrors}
-            />
-          </Route>
-          <Route path={'/confirmation'} component={Confirmation} />
-          <Route exact path='/' component={Home} />
-        </Switch>
-      </div>
+      <Switch>
+        <Route path={'/pizza'}>
+          <PizzaForm 
+            values={formValues}
+            change={inputChange}
+            submit={formSubmit}
+            errors={formErrors}
+          />
+        </Route>
+        <Route path={'/confirmation'} component={Confirmation} />
+        <Route exact path='/' component={Home} />
+      </Switch>
+    </div>
   );
 };
 
