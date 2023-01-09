@@ -24,6 +24,13 @@ function PizzaForm(props) {
             <div className='form-header'>
                 <h3>Build Your Own Pizza</h3>
             </div>
+
+            <div className='errors'>
+                <div>{errors.name}</div>
+                <div>{errors.size}</div>
+                <div>{errors.sauce}</div>
+            </div>
+
             <div className='form-sections'>
                 <label>Name 
                     <input id='name-input'
@@ -79,7 +86,75 @@ function PizzaForm(props) {
                         />
                     </label>
                 </div>
+
+                <div className='toppings-container'>
+                    <h4>Add Toppings</h4>
+                    <h5>Choose up to 4</h5>
+                    <label>Pepperoni
+                        <input
+                            type='checkbox'
+                            name='pepperoni'
+                            checked={values.pepperoni}
+                            onChange={onChange}
+                        />
+                    </label>
+                    <label>Bacon
+                        <input
+                            type='checkbox'
+                            name='bacon'
+                            checked={values.bacon}
+                            onChange={onChange}
+                        />
+                    </label>
+                    <label>Chicken
+                        <input
+                            type='checkbox'
+                            name='chicken'
+                            checked={values.chicken}
+                            onChange={onChange}
+                        />
+                    </label>
+                    <label>Mushrooms
+                        <input
+                            type='checkbox'
+                            name='mushrooms'
+                            checked={values.mushrooms}
+                            onChange={onChange}
+                        />
+                    </label>
+                    <label>Onions
+                        <input
+                            type='checkbox'
+                            name='onions'
+                            checked={values.onions}
+                            onChange={onChange}
+                        />
+                    </label>
+                    <label>Green Peppers
+                        <input
+                            type='checkbox'
+                            name='peppers'
+                            checked={values.peppers}
+                            onChange={onChange}
+                        />
+                    </label>
+                </div>
                 
+                <div className='special-container'>
+                    <h4>Special Instructions</h4>
+                    <label>
+                        <input
+                            type='text'
+                            name='special'
+                            value={values.special}
+                            onChange={onChange}
+                        />
+                    </label>
+                </div>
+            </div>
+
+            <div className='order'>
+                <button id='order-button'>Add to Order</button>
             </div>
         </form>
     )
