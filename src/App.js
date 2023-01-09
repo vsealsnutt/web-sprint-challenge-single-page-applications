@@ -5,16 +5,19 @@ import Home from './Components/Home';
 import PizzaForm from './Components/PizzaForm';
 import Confirmation from './Components/ConfirmationPage';
 
+import formSchema from './Validation/formSchema';
+import * as yup from 'yup';
+
 const initialFormValues = {
   name: '',
   size: '', 
   sauce: '',
-  topping1: false,
-  topping2: false,
-  topping3: false,
-  topping4: false,
-  topping5: false,
-  topping6: false,
+  pepperoni: false,
+  bacon: false,
+  chicken: false,
+  mushrooms: false,
+  onions: false,
+  peppers: false,
   special: ''
 }
 
