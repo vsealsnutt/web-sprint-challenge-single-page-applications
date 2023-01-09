@@ -1,6 +1,9 @@
 import React from "react";
 import { Route, Link } from 'react-router-dom';
 
+import Home from './Components/Home';
+import PizzaForm from './Components/PizzaForm';
+
 const App = () => {
   return (
     <div className="App">
